@@ -5,7 +5,6 @@ import Praticidade from '../assets/Praticidade.svg';
 import Organizacao from '../assets/Organizacao.svg';
 import Historico from '../assets/Historico.svg';
 import Agendamento from '../assets/Agendamento.svg';
-import { FaCheck } from 'react-icons/fa'; // Para usar o ícone de check
 import logo from '../assets/resutex-logo-w.svg';
 
 
@@ -81,10 +80,10 @@ function Home() {
         <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
           <h3 className="text-xl font-bold text-center mb-4">PLANO BÁSICO</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Cadastro de até 70 exames por mês</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Acesso à visualização de resultados em formato digital e laudos explicativos</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Lembretes mensais para consultas e exames + prioridades de atendimento em laboratórios</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Suporte via e-mail e Whatsapp</li>
+            <li className="flex items-center"> - Cadastro de até 70 exames por mês</li>
+            <li className="flex items-center"> - Acesso à visualização de resultados em formato digital e laudos explicativos</li>
+            <li className="flex items-center"> - Lembretes mensais para consultas e exames + prioridades de atendimento em laboratórios</li>
+            <li className="flex items-center"> - Suporte via e-mail e Whatsapp</li>
           </ul>
           <p className="text-center text-2xl font-bold mb-4">R$ 29,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
@@ -94,11 +93,11 @@ function Home() {
         <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
           <h3 className="text-xl font-bold text-center mb-4">PLANO PADRÃO</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Cadastro de exames ilimitados</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Visualização de resultados em gráficos e relatórios detalhados</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Lembretes personalizados para exames e consultas</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Compartilhamento fácil de resultados com médicos</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Suporte via chat ao vivo</li>
+            <li className="flex items-center"> - Cadastro de exames ilimitados</li>
+            <li className="flex items-center"> - Visualização de resultados em gráficos e relatórios detalhados</li>
+            <li className="flex items-center"> - Lembretes personalizados para exames e consultas</li>
+            <li className="flex items-center"> - Compartilhamento fácil de resultados com médicos</li>
+            <li className="flex items-center"> - Suporte via chat ao vivo</li>
           </ul>
           <p className="text-center text-2xl font-bold mb-4">R$ 49,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
@@ -108,13 +107,13 @@ function Home() {
         <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
           <h3 className="text-xl font-bold text-center mb-4">PLANO PREMIUM</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Cadastro de exames ilimitados</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Acesso a análises avançadas de resultados</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Notificações automáticas sobre resultados disponíveis</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Relatórios em PDF para download</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Armazenamento seguro em nuvem</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Suporte prioritário 24/7</li>
-            <li className="flex items-center"><FaCheck className="text-green-500 mr-2" />Acesso a webinars e conteúdos educacionais sobre saúde</li>
+            <li className="flex items-center"> - Cadastro de exames ilimitados</li>
+            <li className="flex items-center"> - Acesso a análises avançadas de resultados</li>
+            <li className="flex items-center"> - Notificações automáticas sobre resultados disponíveis</li>
+            <li className="flex items-center"> - Relatórios em PDF para download</li>
+            <li className="flex items-center"> - Armazenamento seguro em nuvem</li>
+            <li className="flex items-center"> - Suporte prioritário 24/7</li>
+            <li className="flex items-center"> - Acesso a webinars e conteúdos educacionais sobre saúde</li>
           </ul>
           <p className="text-center text-2xl font-bold mb-4">R$ 79,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
