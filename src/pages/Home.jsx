@@ -3,8 +3,8 @@ import React from 'react';
 import Gestao from '../assets/icon-gestao.svg';
 import Praticidade from '../assets/Praticidade.svg';
 import Organizacao from '../assets/Organizacao.svg';
-import Historico from '../assets/Historico.svg';
-import Agendamento from '../assets/Agendamento.svg';
+import Historico from '../assets/historico.svg';
+import Agendamento from '../assets/agendamento.svg';
 import logo from '../assets/resutex-logo-w.svg';
 
 
