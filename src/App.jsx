@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import logo from './assets/resutex-logo.svg';
 import Sobre from './pages/Sobre'; 
 import Planos from './pages/Planos'; 
 import Home from './pages/Home'; 
-import Contato from './pages/Contato'; // Importa a página Planos
+import Contato from './pages/Contato';
+import Entrar from './pages/Entrar';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      <nav className='bg-[#5ADB94] p-5 py-3 fixed top-0 left-0 w-full z-50'>
+      <nav className='bg-[#5ADB94] p-10 py-3 fixed top-0 left-0 w-full z-50'>
         <div className='flex justify-between items-center'>
           <a href="/">
           <img src={logo} alt="Logo" className='h-13 p-0' /></a>
@@ -34,7 +35,7 @@ function App() {
               <a href="/sobre" className="text-[#2F4858] text-xl">SOBRE</a>
               <a href="/planos" className="text-[#2F4858] text-xl">PLANOS</a>
               <a href="/contato" className="text-[#2F4858] text-xl">CONTATO</a>
-              <a href="teste3.html" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
+              <a href="/entrar" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
             </div>
           )}
 
@@ -42,16 +43,17 @@ function App() {
             <a href="/sobre" className="text-[#2F4858] text-xl p-2">SOBRE</a>
             <a href="/planos" className="text-[#2F4858] text-xl p-2">PLANOS</a>
             <a href="/contato" className="text-[#2F4858] text-xl p-2">CONTATO</a>
-            <a href="teste3.html" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
+            <a href="/entrar" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
           </div>
         </div>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Componente Home deve ser criado */}
+        <Route path="/" element={<Home />} /> 
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/planos" element={<Planos />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/entrar" element={<Entrar />} />
       </Routes>
     </>
   );
