@@ -6,12 +6,7 @@ import Praticidade from '../assets/Praticidade.svg';
 import Organizacao from '../assets/Organizacao.svg';
 import Historico from '../assets/historico.svg';
 import Agendamento from '../assets/agendamento.svg';
-import logo from '../assets/resutex-logo-w.svg';
-import Sobre from '../pages/Sobre'; 
-import Contato from '../pages/Contato';
-import Privacidade from '../pages/Privacidade';
-import Termos from '../pages/Termos';
-import TesteAgora from '../pages/TesteAgora'; 
+import logo from '../assets/resutex-logo-w.svg'; 
 
 
 
@@ -24,11 +19,12 @@ function Home() {
           <p className="text-xl leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
           <div className="flex gap-5 mt-4">
             <a href="/testeagora"><button className="bg-black text-white border-3 rounded-2xl">TESTE AGORA</button></a>
-            <button className="text-black bg-transparent border-3 rounded-2xl border-[#000000]">VER PLANOS</button>
+            <a href="/planos">
+            <button className="text-black bg-transparent border-3 rounded-2xl border-[#000000]">VER PLANOS</button></a>
           </div>
         </div>
         <div className="md:w-1/2 w-full flex justify-center mt-5 md:mt-0 mx-15">
-          <img src={Gestao} alt="Boneco-mexendo-em-arquivos" className="max-w-full h-auto" />
+          <img src={Gestao} alt="Boneco-mexendo-em-arquivos" className="max-w-full h-auto mt-14" />
         </div>
       </div>
 
@@ -143,14 +139,6 @@ function Home() {
     <p className="text-sm text-white">&copy; {new Date().getFullYear()} RESUTEX. Todos os direitos reservados.</p>
   </div>
 </footer>
-
-<Routes>
-  <Route path="/sobre" element={<Sobre />} />
-  <Route path="/contato" element={<Contato />} />
-  <Route path="/privacidade" element={<Privacidade />} />
-  <Route path="/termos" element={<Termos />} />
-  <Route path="/testeagora" element={<TesteAgora />} />
-</Routes>
     </>
   );
 }
