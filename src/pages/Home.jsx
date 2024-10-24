@@ -1,11 +1,16 @@
 // src/pages/Home.jsx
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Gestao from '../assets/icon-gestao.svg';
 import Praticidade from '../assets/Praticidade.svg';
 import Organizacao from '../assets/Organizacao.svg';
 import Historico from '../assets/historico.svg';
 import Agendamento from '../assets/agendamento.svg';
 import logo from '../assets/resutex-logo-w.svg';
+import Sobre from '../pages/Sobre'; 
+import Contato from '../pages/Contato';
+import TermosdeServico from '../pages/Termosdeservico';
+import PoliticadePrivacidade from '../pages/Politicadeprivacidade';
 
 
 function Home() {
@@ -16,7 +21,7 @@ function Home() {
           <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-24">Gerenciar os seus Exames <br />nunca foi tão simples</h1>
           <p className="text-xl font-bold leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
           <div className="flex gap-5 mt-4">
-            <button className="text-white border-3 rounded-2xl">TESTE AGORA</button>
+            <button className="bg-black text-white border-3 rounded-2xl">TESTE AGORA</button>
             <button className="text-black bg-transparent border-3 rounded-2xl border-[#000000]">VER PLANOS</button>
           </div>
         </div>
@@ -25,8 +30,8 @@ function Home() {
         </div>
       </div>
 
-      <h2 className="text-2xl text-center my-8 mt-20">Vantagens do Resutex</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 p-20">
+      <h2 className="text-2xl text-center my-16 mt-20 font-bold">Vantagens do Resutex</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 p-24">
         <div className="flex flex-col items-start">
           <img src={Praticidade} alt="Exame escaneado no Tablet" className="mb-2" />
           <h4 className="font-bold">Praticidade</h4>
@@ -52,7 +57,7 @@ function Home() {
         </div>
       </div>
 
-      <h2 className="text-2xl text-center my-8 mt-20">Como Funciona</h2>
+      <h2 className="text-2xl text-center my-16 mt-20 font-bold">Como Funciona</h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 p-6">
 
         <div className="flex flex-col items-start bg-green-300 border-4 border-transparent rounded-xl p-10 ">
@@ -72,50 +77,50 @@ function Home() {
       </div>
 
       <div className="bg-[#009A97] mt-36 p-8">
-        <h2 className="text-2xl text-center my-8 mt-20 font-bold">Comece a Gerenciar a sua saúde em poucos cliques</h2>
-        <h2 className="text-xl text-center my-8">As soluções da Resultex irão transformar a seus cuidados com diagnósticos e condições de saúde</h2>
+        <h2 className="text-white text-2xl text-center my-8 mt-20 font-bold">Comece a Gerenciar a sua saúde em poucos cliques</h2>
+        <h2 className="text-white text-xl text-center my-8">As soluções da Resultex irão transformar a seus cuidados com diagnósticos e condições de saúde</h2>
       </div>
       <div className="bg-[#9db0a3] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6">
         {/* PLANO BÁSICO */}
-        <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
-          <h3 className="text-xl font-bold text-center mb-4">PLANO BÁSICO</h3>
+        <div className="bg-gray-800 border rounded-lg shadow-md p-6 mt-20">
+          <h3 className="text-white text-xl font-bold text-center mb-4">PLANO BÁSICO</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"> - Cadastro de até 70 exames por mês</li>
-            <li className="flex items-center"> - Acesso à visualização de resultados em formato digital e laudos explicativos</li>
-            <li className="flex items-center"> - Lembretes mensais para consultas e exames + prioridades de atendimento em laboratórios</li>
-            <li className="flex items-center"> - Suporte via e-mail e Whatsapp</li>
+            <li className="flex items-center text-white"> - Cadastro de até 70 exames por mês</li>
+            <li className="flex items-center text-white"> - Acesso à visualização de resultados em formato digital e laudos explicativos</li>
+            <li className="flex items-center text-white"> - Lembretes mensais para consultas e exames + prioridades de atendimento em laboratórios</li>
+            <li className="flex items-center text-white"> - Suporte via e-mail e Whatsapp</li>
           </ul>
-          <p className="text-center text-2xl font-bold mb-4">R$ 29,90</p>
+          <p className="text-center text-2xl font-bold mb-4 text-green-600">R$ 29,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
         </div>
 
         {/* PLANO PADRÃO */}
-        <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
-          <h3 className="text-xl font-bold text-center mb-4">PLANO PADRÃO</h3>
+        <div className="bg-gray-800 border rounded-lg shadow-md p-6 mt-20">
+          <h3 className="text-xl font-bold text-center mb-4 text-white">PLANO PADRÃO</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"> - Cadastro de exames ilimitados</li>
-            <li className="flex items-center"> - Visualização de resultados em gráficos e relatórios detalhados</li>
-            <li className="flex items-center"> - Lembretes personalizados para exames e consultas</li>
-            <li className="flex items-center"> - Compartilhamento fácil de resultados com médicos</li>
-            <li className="flex items-center"> - Suporte via chat ao vivo</li>
+            <li className="flex items-center text-white"> - Cadastro de exames ilimitados</li>
+            <li className="flex items-center text-white"> - Visualização de resultados em gráficos e relatórios detalhados</li>
+            <li className="flex items-center text-white"> - Lembretes personalizados para exames e consultas</li>
+            <li className="flex items-center text-white"> - Compartilhamento fácil de resultados com médicos</li>
+            <li className="flex items-center text-white"> - Suporte via chat ao vivo</li>
           </ul>
-          <p className="text-center text-2xl font-bold mb-4">R$ 49,90</p>
+          <p className="text-center text-2xl font-bold mb-4 text-green-600">R$ 49,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
         </div>
 
         {/* PLANO PREMIUM */}
-        <div className="bg-black border rounded-lg shadow-md p-6 mt-20">
-          <h3 className="text-xl font-bold text-center mb-4">PLANO PREMIUM</h3>
+        <div className="bg-gray-800 border rounded-lg shadow-md p-6 mt-20">
+          <h3 className="text-xl font-bold text-center mb-4 text-white">PLANO PREMIUM</h3>
           <ul className="list-disc list-inside mb-4">
-            <li className="flex items-center"> - Cadastro de exames ilimitados</li>
-            <li className="flex items-center"> - Acesso a análises avançadas de resultados</li>
-            <li className="flex items-center"> - Notificações automáticas sobre resultados disponíveis</li>
-            <li className="flex items-center"> - Relatórios em PDF para download</li>
-            <li className="flex items-center"> - Armazenamento seguro em nuvem</li>
-            <li className="flex items-center"> - Suporte prioritário 24/7</li>
-            <li className="flex items-center"> - Acesso a webinars e conteúdos educacionais sobre saúde</li>
+            <li className="flex items-center text-white"> - Cadastro de exames ilimitados</li>
+            <li className="flex items-center text-white"> - Acesso a análises avançadas de resultados</li>
+            <li className="flex items-center text-white"> - Notificações automáticas sobre resultados disponíveis</li>
+            <li className="flex items-center text-white"> - Relatórios em PDF para download</li>
+            <li className="flex items-center text-white"> - Armazenamento seguro em nuvem</li>
+            <li className="flex items-center text-white"> - Suporte prioritário 24/7</li>
+            <li className="flex items-center text-white"> - Acesso a webinars e conteúdos educacionais sobre saúde</li>
           </ul>
-          <p className="text-center text-2xl font-bold mb-4">R$ 79,90</p>
+          <p className="text-center text-2xl font-bold mb-4 text-green-600">R$ 79,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
         </div>
       </div>
@@ -126,16 +131,24 @@ function Home() {
       <img src={logo} alt="Logo da Empresa" className="h-20" />
     </div>
     <div className="flex flex-col md:flex-row space-x-0 md:space-x-4">
-      <a href="#" className="hover:underline mb-2 md:mb-0">Sobre</a>
-      <a href="#" className="hover:underline mb-2 md:mb-0">Contato</a>
-      <a href="#" className="hover:underline mb-2 md:mb-0">Política de Privacidade</a>
-      <a href="#" className="hover:underline mb-2 md:mb-0">Termos de Serviço</a>
+      <a href="/sobre" className="hover:underline mb-2 md:mb-0">Sobre</a>
+      <a href="/contato" className="hover:underline mb-2 md:mb-0">Contato</a>
+      <a href="/politicadePrivacidade" className="hover:underline mb-2 md:mb-0">Política de Privacidade</a>
+      <a href="/termosdeservico" className="hover:underline mb-2 md:mb-0">Termos de Serviço</a>
     </div>
   </div>
   <div className="text-center mt-4">
-    <p className="text-sm">&copy; {new Date().getFullYear()} RESUTEX. Todos os direitos reservados.</p>
+    <p className="text-sm text-white">&copy; {new Date().getFullYear()} RESUTEX. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+<Routes>
+<Route path="/sobre" element={<Sobre />} />
+<Route path="/contato" element={<Contato />} />
+<Route path="/termosdeservico" element={<TermosdeServico />} />
+<Route path="/politicadePrivacidade" element={<PoliticadePrivacidade />} />
+
+</Routes>
     </>
   );
 }
