@@ -3,11 +3,11 @@ import React from 'react';
 function Planos() {
   return (
     <>
-    <div className="bg-[#009A97] mt-12 p-8">
-        <h2 className="text-white text-2xl text-center my-8 mt-20 font-bold">Comece a Gerenciar a sua saúde em poucos cliques</h2>
+    <div className=" mt-12 p-8">
+        <h2 className="text-white text-2xl text-center my-8 mt-20 font-bold">Comece a gerenciar a sua saúde em poucos cliques</h2>
         <h2 className="text-white text-xl text-center my-8">As soluções da Resultex irão transformar a seus cuidados com diagnósticos e condições de saúde</h2>
-      </div>
-      <div className="bg-[#9db0a3] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-2">
         {/* PLANO BÁSICO */}
         <div className="bg-gray-800 border rounded-lg shadow-md p-6 mt-20">
           <h3 className="text-white text-xl font-bold text-center mb-4">PLANO BÁSICO</h3>
@@ -49,6 +49,7 @@ function Planos() {
           </ul>
           <p className="text-center text-2xl font-bold mb-4 text-green-600">R$ 79,90</p>
           <button className="w-full bg-[#009A97] text-white py-2 rounded-lg">ASSINAR</button>
+          </div>
         </div>
       </div>
       </>
