@@ -14,7 +14,7 @@ function Home() {
       <div className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-[#D2FADF] text-black p-7">
         <div className="md:w-1/2 w-full text-left justify-center mx-32 p-6">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-24">Gerenciar os seus Exames <br />nunca foi tão simples</h1>
-          <p className="text-2xl font-bold leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
+          <p className="text-xl font-bold leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
           <div className="flex gap-5 mt-4">
             <button className="text-white border-3 rounded-2xl">TESTE AGORA</button>
             <button className="text-black bg-transparent border-3 rounded-2xl border-[#000000]">VER PLANOS</button>
