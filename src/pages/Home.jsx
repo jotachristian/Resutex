@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
 import Gestao from '../assets/icon-gestao.svg';
 import Praticidade from '../assets/Praticidade.svg';
 import Organizacao from '../assets/Organizacao.svg';
@@ -9,8 +9,10 @@ import Agendamento from '../assets/agendamento.svg';
 import logo from '../assets/resutex-logo-w.svg';
 import Sobre from '../pages/Sobre'; 
 import Contato from '../pages/Contato';
-import TermosdeServico from '../pages/Termosdeservico';
-import PoliticadePrivacidade from '../pages/Politicadeprivacidade';
+import Privacidade from '../pages/Privacidade';
+import Termos from '../pages/Termos';
+import TesteAgora from '../pages/TesteAgora'; 
+
 
 
 function Home() {
@@ -19,9 +21,9 @@ function Home() {
       <div className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-[#D2FADF] text-black p-7">
         <div className="md:w-1/2 w-full text-left justify-center mx-32 p-6">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-24">Gerenciar os seus Exames <br />nunca foi tão simples</h1>
-          <p className="text-xl font-bold leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
+          <p className="text-xl leading-relaxed">Cadastre seus exames, visualize resultados e <br />Receba alertas sobre consultas futuras de<br /> maneira simples e intuitiva</p>
           <div className="flex gap-5 mt-4">
-            <button className="bg-black text-white border-3 rounded-2xl">TESTE AGORA</button>
+            <a href="/testeagora"><button className="bg-black text-white border-3 rounded-2xl">TESTE AGORA</button></a>
             <button className="text-black bg-transparent border-3 rounded-2xl border-[#000000]">VER PLANOS</button>
           </div>
         </div>
@@ -131,10 +133,10 @@ function Home() {
       <img src={logo} alt="Logo da Empresa" className="h-20" />
     </div>
     <div className="flex flex-col md:flex-row space-x-0 md:space-x-4">
-      <a href="/sobre" className="hover:underline mb-2 md:mb-0">Sobre</a>
-      <a href="/contato" className="hover:underline mb-2 md:mb-0">Contato</a>
-      <a href="/politicadePrivacidade" className="hover:underline mb-2 md:mb-0">Política de Privacidade</a>
-      <a href="/termosdeservico" className="hover:underline mb-2 md:mb-0">Termos de Serviço</a>
+      <a href="/sobre" className="hover:underline mb-2 md:mb-0 text-white">Sobre</a>
+      <a href="/contato" className="hover:underline mb-2 md:mb-0 text-white">Contato</a>
+      <a href="/privacidade" className="hover:underline mb-2 md:mb-0 text-white">Política de Privacidade</a>
+      <a href="/termos" className="hover:underline mb-2 md:mb-0 text-white">Termos de Serviço</a>
     </div>
   </div>
   <div className="text-center mt-4">
@@ -143,11 +145,11 @@ function Home() {
 </footer>
 
 <Routes>
-<Route path="/sobre" element={<Sobre />} />
-<Route path="/contato" element={<Contato />} />
-<Route path="/termosdeservico" element={<TermosdeServico />} />
-<Route path="/politicadePrivacidade" element={<PoliticadePrivacidade />} />
-
+  <Route path="/sobre" element={<Sobre />} />
+  <Route path="/contato" element={<Contato />} />
+  <Route path="/privacidade" element={<Privacidade />} />
+  <Route path="/termos" element={<Termos />} />
+  <Route path="/testeagora" element={<TesteAgora />} />
 </Routes>
     </>
   );

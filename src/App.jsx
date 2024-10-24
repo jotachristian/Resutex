@@ -8,6 +8,7 @@ import Contato from './pages/Contato';
 import Entrar from './pages/Entrar';
 
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -47,7 +48,7 @@ function App() {
           </div>
         </div>
       </nav>
-
+     
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/sobre" element={<Sobre />} />
