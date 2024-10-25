@@ -37,18 +37,18 @@ function App() {
 
             {menuOpen && (
               <div className="fixed top-0 left-0 w-full h-full bg-[#5ADB94] flex flex-col items-center justify-center gap-4 mt-4 md:hidden z-40">
-                <a href="/sobre" className="text-[#2F4858] text-sm">SOBRE</a>
-                <a href="/planos" className="text-[#2F4858] text-sm">PLANOS</a>
-                <a href="/contato" className="text-[#2F4858] text-sm">CONTATO</a>
-                <a href="/entrar" className="text-[#ffffff] text-sm bg-[#008492] rounded-xl p-2">ENTRAR</a>
+                <a href="/sobre" className="text-[#2F4858] text-xl">SOBRE</a>
+                <a href="/planos" className="text-[#2F4858] text-xl">PLANOS</a>
+                <a href="/contato" className="text-[#2F4858] text-xl">CONTATO</a>
+                <a href="/entrar" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
               </div>
             )}
 
-            <div className="hidden md:flex justify-end gap-4 flex-wrap p-2">
-              <a href="/sobre" className="text-[#2F4858] text-xl p-2">SOBRE</a>
-              <a href="/planos" className="text-[#2F4858] text-xl p-2">PLANOS</a>
-              <a href="/contato" className="text-[#2F4858] text-xl p-2">CONTATO</a>
-              <a href="/entrar" className="text-[#ffffff] text-xl bg-[#008492] rounded-xl p-2">ENTRAR</a>
+            <div className="hidden md:flex justify-end gap-4 flex-wrap p-3">
+              <a href="/sobre" className="text-[#2F4858] text-lg p-3 transition duration-300 hover: green-500">SOBRE</a>
+              <a href="/planos" className="text-[#2F4858] text-lg p-3 transition duration-300">PLANOS</a>
+              <a href="/contato" className="text-[#2F4858] text-lg p-3 transition duration-300">CONTATO</a>
+              <a href="/entrar" className="botaoEntrar text-lg rounded-2xl p-2 pt-3 transition duration-300">ENTRAR</a>
             </div>
           </div>
         </nav>

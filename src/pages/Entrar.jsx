@@ -8,7 +8,9 @@ function Login() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-r from-green-900 to-green-500">
       <div className="flex items-center justify-between w-full mt-12 lg:fixed lg:top-0 lg:left-2 lg:w-1/2">
+      <a href="/">
   <img src={logo} alt="Logo" className="h-14 ml-28" />
+  </a>
 </div>
 
       {/* Espaço para compensar o header fixo em telas grandes */}

@@ -4,7 +4,7 @@ import React from 'react';
 function Termos() {
   return (
     <>
-      <section className="bg-white py-12 px-6 lg:px-32">
+      <section className="bg-white py-12 px-6 lg:px-32 mt-28">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-[#063F50] mb-8 text-center mt-24">Termos de Serviço</h2>
 
